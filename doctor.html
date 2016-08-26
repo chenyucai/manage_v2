@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+  <head>
+    <meta charset="utf-8">
+    <title>若初医助</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/angular.min.js" charset="utf-8"></script>
+    <script src="js/angular-route.min.js" charset="utf-8"></script>
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/config.js" charset="utf-8"></script>
+    <script src="js/doctor.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="head" id="header">
+      <div class="head_box">
+        <div class="head_inner">
+          <h1 class="logo">
+            <img src="img/logo.jpg" alt="" />
+            <a href="#" title="若初医助">若初医助</a>
+          </h1>
+          <div class="account">
+            <div class="account_info">
+              <img src="img/getheadimg.jpg" alt="" class="account_icon"/>
+              <span class="account_organ">上海复旦肿瘤医院</span>
+              <span class="account_name">陈医生</span>
+              <div class="account_logout">
+                <a href="/logout?token=">退出</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body" id="body">
+      <div class="container_box">
+        <div class="col_side">
+          <div class="menu_box" id="menuBar">
+            <dl class="menu" ng-repeat="nav in menu">
+              <dt class="menu_title"><i class="icon_menu" style="background-image:url({{nav.icon}})"></i>{{nav.title}}</dt>
+              <dd class="menu_item {{pageId === item.id ? 'seleted' : ''}}" ng-repeat="item in nav.items"><a href="/">{{item.title}}</a><i class="icon_new"></i></dd>
+            </dl>
+          </div>
+        </div>
+        <div class="col_main">
+          <ng-view></ng-view>
+        </div>
+      </div>
+    </div>
+    <div class="foot" id="footer">
+      <ul class="links ft">
+        <li class="links_item no_extra"><a href="#">关于若初</a></li>
+        <li class="links_item"><a href="#">服务协议</a></li>
+        <li class="links_item"><a href="#">运营规范</a></li>
+        <li class="links_item"><a href="#">客服中心</a></li>
+        <li class="links_item"><a href="#">联系邮箱</a></li>
+        <li class="links_item">
+          <p class="copyright">
+            Copyright (c) 2014-2016 Copyright Ruochu All Rights Reserved.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

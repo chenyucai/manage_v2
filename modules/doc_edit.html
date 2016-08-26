@@ -1,0 +1,94 @@
+<div>
+  <div class="main_hd hasTab">
+    <h2>编辑医生</h2>
+    <div class="title_tab">
+      <ul class="tab_navs">
+        <li class="tab_nav seleted"><a href="javascript:;">基本信息</a></li>
+        <li class="tab_nav"><a href="#/setting/{{id}}">功能设置</a></li>
+        <li class="tab_nav"><a href="#/app/{{id}}">微信与app</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_bd">
+    <div class="info_area">
+      <h3 class="info_area_title">基本信息</h3>
+      <ul>
+        <li class="info_item pic_item">
+          <h4>头像</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改头像</a>
+          </div>
+          <div class="info_meta_content">
+            <img src="{{icon}}" alt="" class="info_meta_pic"/>
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>姓名</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{name}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>性别</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{sex}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>级别</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">更改</a>
+          </div>
+          <div class="info_meta_content">
+            {{level}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>擅长领域</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{experts.join('，')}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>简介</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{introduce}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>排序</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+            <p class="desc">
+              该排序是在页面中显示医生时的排列顺序
+            </p>
+          </div>
+          <div class="info_meta_content">
+            {{order}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>医生团队</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">开通</a>
+          </div>
+          <div class="info_meta_content">
+            {{team?'已开通':'未开通'}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

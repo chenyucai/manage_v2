@@ -1,0 +1,120 @@
+<div>
+  <div class="main_hd hasTab">
+    <h2>编辑医生</h2>
+    <div class="title_tab">
+      <ul class="tab_navs">
+        <li class="tab_nav"><a href="#/edit/{{id}}">基本信息</a></li>
+        <li class="tab_nav seleted"><a href="javascript:;">功能设置</a></li>
+        <li class="tab_nav"><a href="#/app/{{id}}">微信与app</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_bd areas dset_info">
+    <div class="info_area">
+      <h3 class="info_area_title">基本设置</h3>
+      <ul>
+        <li class="info_item">
+          <h4>手机号码</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{mobile}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="info_area">
+      <h3 class="info_area_title">门诊</h3>
+      <ul>
+        <li class="info_item">
+          <h4>门诊</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{openOutpatient?'已开通':'未开通'}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>可审批所有门诊</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{allowAllOutpatient?'是':'否'}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>可审批所属团队门诊</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{allowAllOutpatient?'是':'否'}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>审批指定的医生的门诊</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            <span ng-repeat="doc in allowDoctorsOutpatient">{{doc.name+' '}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="info_area">
+      <h3 class="info_area_title">门诊手术</h3>
+      <ul>
+        <li class="info_item">
+          <h4>门诊手术</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{openOperation?'已开通':'未开通'}}
+          </div>
+        </li>
+        <li class="info_item">
+          <h4>可审批所有门诊手术</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{allowAllOperation?'是':'否'}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="info_area">
+      <h3 class="info_area_title">解读报告</h3>
+      <ul>
+        <li class="info_item">
+          <h4>消息推送</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{openReport?'已开通':'未开通'}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="info_area">
+      <h3 class="info_area_title">医生端模块权限</h3>
+      <ul>
+        <li class="info_item">
+          <h4>功能模块</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{roles}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

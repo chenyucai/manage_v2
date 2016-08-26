@@ -1,0 +1,42 @@
+<div>
+  <div class="main_hd hasTab">
+    <h2>编辑医生</h2>
+    <div class="title_tab">
+      <ul class="tab_navs">
+        <li class="tab_nav"><a href="#/edit/{{id}}">基本信息</a></li>
+        <li class="tab_nav"><a href="#/setting/{{id}}">功能设置</a></li>
+        <li class="tab_nav seleted"><a href="javascript:;">微信与app</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_bd areas">
+    <div class="info_area">
+      <h3 class="info_area_title">微信</h3>
+      <ul>
+        <li class="info_item">
+          <h4>微信</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{bindWx?'已绑定':'未绑定'}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="info_area">
+      <h3 class="info_area_title">app</h3>
+      <ul>
+        <li class="info_item">
+          <h4>app</h4>
+          <div class="info_meta_opt">
+            <a href="javascript:;">修改</a>
+          </div>
+          <div class="info_meta_content">
+            {{bindApp?'已绑定':'未绑定'}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

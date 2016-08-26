@@ -1,0 +1,44 @@
+<div>
+  <div class="main_hd">
+    <h2>医生管理</h2>
+  </div>
+  <div class="main_bd">
+    <div class="mp_area">
+      <div class="mp_title mp_col mp_doctor">
+        <h3 class="name">医生姓名</h3>
+        <h3 class="sex">性别</h3>
+        <h3 class="level">医生级别</h3>
+      </div>
+      <ul class="mp_list">
+        <li class="mp_item mp_col mp_doctor" ng-repeat="doc in doctors">
+          <span class="name">{{doc.name}}</span>
+          <span class="sex">{{doc.sex}}</span>
+          <span class="level">{{doc.level}}</span>
+          <a href="javascript:void(0);" ng-click="delete(doc.id)">删除</a>
+          <a href="javascript:void(0);">排班</a>
+          <a href="#/edit/{{doc.id}}">编辑</a>
+        </li>
+      </ul>
+    </div>
+    <div class="pagenation_wrp">
+      <div class="pagenation">
+        <span class="page_nav_area">
+          <a href="javascript:void(0);" class="page_first" style="display:none;"></a>
+          <a href="javascript:void(0);" class="page_prev" ng-show="{{show_prev}}" ng-click="query(page - 1)"><i class="arrow"></i></a>
+          <span class="page_num">
+            <label>{{page}}</label>
+            <span class="num_gap">/</span>
+            <label>{{pageCount}}</label>
+            <span class="num_count">,共{{count}}条记录</span>
+          </span>
+          <a href="javascript:void(0);" class="page_next" ng-show="{{show_next}}" ng-click="query(page + 1)"><i class="arrow"></i></a>
+          <a href="javascript:void(0);" class="page_last" style="display:none;"></a>
+        </span>
+        <span class="goto_area">
+          <input type="text" name="name" value="">
+          <a href="javascript:void(0);" class="page_go">跳转</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="renderer" content="webkit">
+    <title>主页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/fontAwesome/css/font-awesome.min.css" rel="stylesheet" media="all" />
+    <link href="css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    <!-- sobox -->
+    <link href="css/plugins/sobox/sobox.css" rel="stylesheet">
+    <!-- viewer.css -->
+    <link href="css/plugins/viewer/viewer.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <span>
+                          <img alt="image" class="img-circle admin-icon" src="img/profile_small.png"/>
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                          <span class="text-muted text-xs block"><span id="accName"></span><b class="caret"></b></span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs" id="accDrop">
+                            <!-- <li><a href="#">个人资料</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li><a href="#">安全退出</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="logo-element" id="LOGO">
+
+                    </div>
+                </li>
+                <li id="template" style="display:none;">
+                    <a href="#"><i class=""></i> <span class="nav-label"></span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message"><a href="index.html" title="返回首页"><i class="fa fa-home"></i></a><span id="WELCOME"></span></span>
+                    </li>
+                    <li>
+                        <a href="#" onclick="logout();">
+                            <i class="fa fa-sign-out"></i> 退出
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10" style="padding-top:20px;">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">主页</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight" style="text-align:center;font-size:30px;padding-top:100px;">
+          <!-- white here -->
+          欢迎使用若初医助管理系统！
+          <a href="v2/index.html">测试</a>
+        </div>
+    </div>
+
+  </div>
+  <!-- Mainly scripts -->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+  <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="js/plugins/laydate/laydate.js"></script>
+
+  <!-- Peity -->
+  <script src="js/plugins/peity/jquery.peity.min.js"></script>
+
+  <!-- jqGrid -->
+  <script src="js/plugins/jqgrid/i18n/grid.locale-cn.js"></script>
+  <script src="js/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+  <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+  <!-- Custom and plugin javascript -->
+  <script src="js/hplus.js"></script>
+  <script src="js/plugins/pace/pace.min.js"></script>
+  <!-- viewer.js -->
+  <script type="text/javascript" src="js/plugins/viewer/dist/viewer.js"></script>
+  <!-- sobox -->
+  <script type="text/javascript" src="js/plugins/sobox/jquery.sobox.js"></script>
+  <script src="js/plugins/validate/jquery.validate.min.js"></script>
+  <script src="js/plugins/validate/messages_zh.min.js"></script>
+
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
+  <script type="text/javascript">
+    verifyFLAG();
+    $(function(){
+      init_menu();
+    });
+  </script>
+</body>
+
+</html>
