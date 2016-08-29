@@ -13,10 +13,10 @@
     var $this = $(this);
 
     $this.on('click',function(){
-
+      alert(1);
     });
 
     var renderHtml = "";
   };
-  
+
 })(jQuery);
