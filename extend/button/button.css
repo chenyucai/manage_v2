@@ -1,0 +1,23 @@
+/**
+ * html结构
+ * <button type="button" name="button" class="rc_button">完成</button>
+ */
+ .rc_button{
+   display: inline-block;
+   overflow: visible;
+   padding: 0 22px;
+   height: 30px;
+   line-height: 28px;
+   vertical-align: middle;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 3px;
+   font-size: 14px;
+   border-width: 1px;
+   border-style: solid;
+   cursor: pointer;
+   border-color: #56B3F6;
+   color: #fff;
+   background-color: #56B3F6;
+   min-width: 60px;
+ }
