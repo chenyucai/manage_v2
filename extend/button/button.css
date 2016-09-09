@@ -21,3 +21,6 @@
    background-color: #56B3F6;
    min-width: 60px;
  }
+ .rc_button:hover{
+   background-color: #43A0E3;
+ }
