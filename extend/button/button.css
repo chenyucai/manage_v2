@@ -1,8 +1,9 @@
 /**
  * html结构
- * <button type="button" name="button" class="rc_button">完成</button>
+ * <button type="button" class="rc_btn btn_success">完成</button>
+   <button type="button" class="rc_btn btn_default">默认</button>
  */
- .rc_button{
+ .rc_btn{
    display: inline-block;
    overflow: visible;
    padding: 0 22px;
@@ -16,11 +17,21 @@
    border-width: 1px;
    border-style: solid;
    cursor: pointer;
+   min-width: 80px;
+ }
+ .rc_btn.btn_success{
    border-color: #56B3F6;
    color: #fff;
    background-color: #56B3F6;
-   min-width: 60px;
  }
- .rc_button:hover{
+ .rc_btn.btn_default{
+   border-color: #e7e7eb;
+   color: #222;
+   background-color: #fff;
+ }
+ .rc_btn.btn_success:hover{
    background-color: #43A0E3;
+ }
+ .rc_btn.btn_default:hover{
+   background-color: #e7e7eb;
  }
